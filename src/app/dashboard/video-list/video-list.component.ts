@@ -7,6 +7,7 @@ import { Video } from '../../app-types';
   styleUrls: ['./video-list.component.css'],
 })
 export class VideoListComponent implements OnInit {
+  selectedId: string | undefined;
   videoList: Video[] = [
     {
       title: 'Tips from Angular Book Camp instructors',
