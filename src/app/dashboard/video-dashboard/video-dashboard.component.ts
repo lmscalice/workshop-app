@@ -7,6 +7,7 @@ import { Video } from '../../app-types';
   styleUrls: ['./video-dashboard.component.css'],
 })
 export class VideoDashboardComponent implements OnInit {
+  selectedVideo: Video | undefined;
   videos: Video[] = [
     {
       title: 'Tips from Angular Book Camp instructors',
@@ -144,4 +145,8 @@ export class VideoDashboardComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  setSelectedVideo(video: Video) {
+    this.selectedVideo = video;
+  }
 }
